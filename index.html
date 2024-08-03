@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Кинотеатр Кристалл</title>
+</head>
+<body>
+    <div class="logos_header">
+        <div class="geo"><img src="geo.png" alt="Гео">г.Маркс <br> Прк-т Ленина д.117 <br>
+            2 этаж</div>
+        <div class="pz"><img src="pz.png" alt="Премьер зал"></div>
+    </div>
+    <div class="header">
+        <div class="logo"><img src="logo.png" alt="Логотип"></div>
+        <div class="text1">Работаем с <br>
+            10:00 до 23:00</div>
+        <div class="vk"><img src="vklogo.png" alt="VK"></div>
+        <div class="text2">+7(927) 915-30-30</div>
+        <div class="ad_time">
+            10:00 - 23:00 <br>
+            <b>+7(927) 915-30-30</b>
+        </div>
+    </div>
+
+    <span class="today">Сегодня в кино:</span>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="lk.png" alt=""><a href="https://www.kinopoisk.ru/film/1346358/?utm_referrer=www.google.com">Летучий корабль <br> 2D 6+</a></div>
+          <div class="swiper-slide"><img src="omen.png" alt=""><a href=""> Омен. Непорочная <br>2D 18+</a></div>
+          <div class="swiper-slide"><img src="ky.png" alt=""><a href="">Крутые яйца <br>"Миссия пингвин" <br> 2D 6+ </a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+    
+    <script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+      </script>
+    
+</body>
+</html>
