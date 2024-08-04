@@ -18,7 +18,7 @@ body {
     padding: 0;
     background-image: url("back.png");
     background-repeat: no-repeat;
-    height: 1920px;
+    height: 4190px;
     width: 1080px;
 }
 
@@ -58,8 +58,8 @@ body {
 .header{
     @media (max-width: 480px) {
         position: absolute;
-        left: 4%;
-        top: 2%;
+        left: 6%;
+        top: 3%;
         width: 350px;
         height: 80px;
         border-radius: 20px;
@@ -159,18 +159,18 @@ body {
 .today{
     @media (max-width:480px) {
         position: absolute;
-    left: 20%;
+    left: 12%;
     top: 18%;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 25px;
     font-family: sansation bold;
     }
     color: #ffffff;
     font-size: 70px;
     font-family: sansation bold;
     position: absolute;
-    left: 35%;
-    top:23%
+    left: 26%;
+    top:25%
 }
 
 
@@ -184,7 +184,7 @@ body {
     width: 1770px;
     height: 900px;
     position: absolute;
-    top: 17%;
+    top: 7%;
 }
 
 .swiper-slide a{
@@ -216,3 +216,38 @@ body {
     left: 10%;
 }
 
+.today1{
+    @media (max-width:480px) {
+        position: absolute;
+    left:27%;
+    top: 77%;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: sansation bold;
+    }
+    color: #ffffff;
+    font-size: 70px;
+    font-family: sansation bold;
+    position: absolute;
+    left: 45%;
+    top:150%
+}
+
+.calendar {
+    @media (max-width:480px) {
+    position: absolute;
+    left:10%;
+    top: 88%;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: sansation bold;
+    display: flex;
+    list-style-type: none;
+    }
+}
+
+.calendar li{
+    @media (max-width:480px) {
+        margin-left: 10px;;
+        }
+}
