@@ -160,7 +160,7 @@ body {
     @media (max-width:480px) {
         position: absolute;
     left: 12%;
-    top: 18%;
+    top: 20%;
     color: #ffffff;
     font-size: 25px;
     font-family: sansation bold;
@@ -220,7 +220,7 @@ body {
     @media (max-width:480px) {
         position: absolute;
     left:27%;
-    top: 77%;
+    top: 85%;
     color: #ffffff;
     font-size: 30px;
     font-family: sansation bold;
@@ -237,7 +237,7 @@ body {
     @media (max-width:480px) {
     position: absolute;
     left:10%;
-    top: 88%;
+    top: 93%;
     color: #ffffff;
     font-size: 15px;
     font-family: sansation bold;
