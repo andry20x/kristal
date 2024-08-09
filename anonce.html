@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link type="image/png" sizes="32x32" rel="icon" href="favicon.ico">
+  <title>Кинотеатр Кристалл</title>
+</head>
+<body>
+  <div class="logos_header">
+    <div class="geo"><img src="geo.png" alt="Гео">г.Маркс <br> Прк-т Ленина д.117 <br>
+      2 этаж</div>
+      <div class="pz"><img src="pz.png" alt="Премьер зал"></div>
+    </div>
+    <div class="header">
+      <div class="logo"><img src="logo.png" alt="Логотип"></div>
+      <div class="text1">Работаем с <br>
+        10:00 до 23:00</div>
+        <a href="https://t.me/+kSGFjm0ALxQ1ZTVi" class="tg"><img src="tg.png" alt=""></a>
+        <a href="https://vk.com/kinomarks" class="vk"><img src="vklogo.png" alt=""></a>
+        <div class="text2">+7(927) 915-30-30</div>
+        <div class="ad_time">
+          10:00 <br> 23:00 
+        </div>
+      </div>
+      <span class="films">Сегодня в прокате:</span>
+      <div class="films-box">
+        <div class="block-film"><img src="omen.png" alt="">
+        <h4>Омен. Непорочная</h4> 
+        <h6>Ужастик, 2D, 18+</h6>
+        <h5>Продолжительность 110 минут</h5>
+        <button onclick="openModal()">Купить билет</button>
+      </div>
+        <div class="block-film"><img src="ky.png" alt="">
+          <h4>Крутые яйца "Миссия пингвин"</h4>
+          <h6>Мультфильм, 2D, 6+</h6>
+          <h5>Продолжительность 110 минут</h5>
+          <button onclick="openModal()">Купить билет</button>
+        </div>
+        <div class="block-film"><img src="lk.png" alt="">
+          <h4>Летучий корабль</h4>
+          <h6>Сказка, 2D, 6+</h6>
+          <h5>Продолжительность 110 минут</h5>
+          <button onclick="openModal()">Купить билет</button>
+      </div>
+      </div>
+        <div class="navigation"> 
+          <nav class="bottom-nav"> 
+            <a href="index.html"><img src="home.png" alt="">Главная</a> 
+            <a href="anonce.html" class="active"> <img src="film.png" alt="">Сеансы</a> 
+            <a href="news.html"><img src="newspaper.png" alt="">Анонсы</a> 
+            <a href="contacts.html"><img src="info.png" alt="">Контакты</a> 
+          </nav> 
+        </div> 
+        <div class="modal">
+          <div class="modal-content">
+            <h2>Выберите сеанс и место</h2>
+            <style>
+              
+              .seat {
+                margin-left: 100px;
+                width: 15px;
+                height: 15px;
+                border: 1px solid rgb(117, 16, 16);
+                border-radius: 5px;
+                float: left;
+                margin: 5px;
+                cursor: pointer;
+              }
+              
+            </style>
+            <div id="seats"></div>
+            <button class="close-button">Закрыть</button>
+            <button class="pay-button">К оплате</button>
+          </div>
+        </div>
+        
+        <script>
+          // Функция для создания макета зала
+          function createSeats() {
+            var seats = document.getElementById('seats');
+            for (var i = 0; i < 12; i++) { // Предположим, что в зале 10 рядов
+              var row = document.createElement('div');
+              row.className = 'row';
+              seats.appendChild(row);
+              for (var j = 0; j < 12; j++) { // Предположим, что в каждом ряду 10 мест
+                var seat = document.createElement('div');
+                seat.className = 'seat';
+                row.appendChild(seat);
+              }
+            }
+          }
+          
+          // Обработчик события клика по месту
+          function handleClick(event) {
+            var clickedSeat = event.target;
+            if (clickedSeat.classList.contains('selected')) {
+              clickedSeat.classList.remove('selected');
+            } else {
+              clickedSeat.classList.add('selected');
+              alert('Тест выбора мест, ряд: ' + clickedSeat.parentElement.getAttribute('data-row') + ', Место ' + clickedSeat.getAttribute('data-seat'));
+            }
+          }
+          
+          // Инициализация
+          createSeats();
+          
+          // Добавление обработчика события клика ко всем местам
+          document.addEventListener('DOMContentLoaded', function() {
+            var seats = document.querySelectorAll('.seat');
+            seats.forEach(function(seat) {
+              seat.addEventListener('click', handleClick);
+            });
+          });
+          </script>
+        
+        <script>
+        // Функция для открытия модального окна
+        function openModal() {
+          document.querySelector('.modal').style.display = 'block';
+        }
+        
+        // Функция для закрытия модального окна
+        function closeModal() {
+          document.querySelector('.modal').style.display = 'none';
+        }
+        
+        // Обработчик событий для кнопки закрытия
+        document.querySelector('.close-button').addEventListener('click', closeModal);
+        </script>
+      </body>
+      </html>

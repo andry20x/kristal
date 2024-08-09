@@ -1,83 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link type="image/png" sizes="32x32" rel="icon" href="favicon.ico">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Кинотеатр Кристалл</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link type="image/png" sizes="32x32" rel="icon" href="favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <title>Кинотеатр Кристалл</title>
 </head>
 <body>
-    <div class="logos_header">
-        <div class="geo"><img src="geo.png" alt="Гео">г.Маркс <br> Прк-т Ленина д.117 <br>
-            2 этаж</div>
-        <div class="pz"><img src="pz.png" alt="Премьер зал"></div>
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+  <div class="logos_header">
+    <div class="geo"><img src="geo.png" alt="Гео">г.Маркс <br> Прк-т Ленина д.117 <br>
+      2 этаж</div>
+      <div class="pz"><img src="pz.png" alt="Премьер зал"></div>
     </div>
     <div class="header">
-        <div class="logo"><img src="logo.png" alt="Логотип"></div>
-        <div class="text1">Работаем с <br>
-            10:00 до 23:00</div>
-        <div class="vk"><img src="vklogo.png" alt="VK"></div>
+      <div class="logo"><img src="logo.png" alt="Логотип"></div>
+      <div class="text1">Работаем с <br>
+        10:00 до 23:00</div>
+        <a href="https://t.me/+kSGFjm0ALxQ1ZTVi" class="tg"><img src="tg.png" alt=""></a>
+        <a href="https://vk.com/kinomarks" class="vk"><img src="vklogo.png" alt=""></a>
         <div class="text2">+7(927) 915-30-30</div>
         <div class="ad_time">
-            10:00 - 23:00 <br>
-            <b>+7(927) 915-30-30</b>
+          10:00 <br> 23:00 
         </div>
-    </div>
+      </div>
+      <div class="navigation"> 
+        <nav class="bottom-nav"> 
+          <a href="index.html" class="active"><img src="home.png" alt="">Главная</a> 
+          <a href="anonce.html"><img src="film.png" alt="">Сеансы</a> 
+          <a href="news.html"><img src="newspaper.png" alt="">Анонсы</a> 
+          <a href="contacts.html"><img src="info.png" alt="">Контакты</a> 
+        </nav> 
+      </div> 
 
-    <span class="today">Премьеры этого четверга:</span>
-
-    <div class="swiper">
+      <div class="info">
+        <h2>Кристалл синема - это:</h2>
+        <ul>
+          <li>Премьеры каждый четверг! 🎞</li>
+          <li>Два кинозала! 🎬</li>
+          <li>Вкусный попкорн! 🍿</li>
+          <li>Бронь билетов! 🎟</li>
+        </ul>
+      </div>
+      <span class="today">Премьеры этого четверга:</span>
+      
+      <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="lk.png" alt=""><a href="https://www.kinopoisk.ru/film/1346358/?utm_referrer=www.google.com">Летучий корабль <br> 2D 6+</a></div>
           <div class="swiper-slide"><img src="omen.png" alt=""><a href=""> Омен. Непорочная <br>2D 18+</a></div>
           <div class="swiper-slide"><img src="ky.png" alt=""><a href="">Крутые яйца <br>"Миссия пингвин" <br> 2D 6+ </a></div>
+          <div class="swiper-slide"><img src="ky.png" alt=""><a href="">Крутые яйца <br>"Миссия пингвин" <br> 2D 6+ </a></div>
+          <div class="swiper-slide"><img src="ky.png" alt=""><a href="">Крутые яйца <br>"Миссия пингвин" <br> 2D 6+ </a></div>
+          
         </div>
         <div class="swiper-pagination"></div>
-      
+        
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
+        
       </div>
+      
+      
 
-      <span class="today1"><img src="logo.png" alt=""></span>
-      <ul class="calendar">
-        <li>Сегодня</li>
-        <li>4 Августа</li>
-        <li>5 Августа</li>
-      </ul>
-      <div class="today1_act">
-        <div class="block1"></div>
-        <div class="block2"></div>
-        <div class="block3"></div>
-        <div class="block4"></div>
-      </div>
-    
-    <script>
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-      
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
+     
+      <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 500);
+        }
       </script>
-    
-</body>
-</html>
+      
+      <script>
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+          
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+      </script>
+      <script>
+        var swiper1 = new Swiper('.swiper1', {
+            pagination: '.swiper-pagination1',
+            paginationClickable: true,
+        });
+        var swiper2 = new Swiper('.swiper2', {
+            pagination: '.swiper-pagination2',
+            paginationClickable: true,
+        });
+      </script>
+      
+    </body>
+    </html>
